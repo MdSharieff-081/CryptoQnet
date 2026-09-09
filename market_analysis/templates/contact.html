@@ -1,0 +1,428 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Cryptocurrency market analysis</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="56x56" href="{% static 'assets/images/fav-icon/icon.png' %}" />
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" type="text/css" media="all" />
+    <!-- carousel CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" type="text/css" media="all" />
+    <!-- theme default CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}" type="text/css" media="all" />
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" type="text/css" media="all" />
+    <!-- animated-text CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/animated-text.css' %}" type="text/css" media="all" />
+    <!-- font-awesome CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}" type="text/css" media="all" />
+    <!-- font-flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}" type="text/css" media="all" />
+    <!-- theme-default CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/theme-default.css' %}" type="text/css" media="all" />
+    <!-- meanmenu CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}" type="text/css" media="all" />
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" media="all" />
+    <!-- venobox CSS -->
+    <link rel="stylesheet" href="{% static 'venobox/venobox.css' %}" type="text/css" media="all" />
+    <!-- responsive CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+    <!-- loder -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+        <div class="loder-section left-section"></div>
+        <div class="loder-section right-section"></div>
+    </div>
+    <!--==================================================-->
+    <!-- Start cryptobit Main Menu Area -->
+    <!--==================================================-->
+    <div id="sticky-header" class="cryptobit_nav_manu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="logo">
+                        <a class="logo_img" href="{% static 'home' %}" title="cryptobit">
+                            <img src="{% static 'assets/images/logo.png' %}" alt="" />
+                        </a>
+                        <a class="main_sticky" href="{% static 'home' %}" title="cryptobit">
+                            <img src="{% static 'assets/images/logo.png' %}" alt="astute" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <nav class="cryptobit_menu">
+                        <ul class="nav_scroll">
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'admin-login' %}">Admin</a></li>
+                            <li>
+                                <a href="#service">User <span>+</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="{% url 'user-login' %}">Login</a></li>
+                                    <li><a href="{% url 'user-login' %}">Register</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                        <div class="header-button">
+                            <a href="{% url 'user-login' %}"><i class="far fa-user"></i> Register</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Cryptobit Mobile Menu Area -->
+    <div class="mobile-menu-area d-sm-block d-md-block d-lg-none">
+        <div class="mobile-menu">
+            <nav class="cripto_menu">
+                <ul class="nav_scroll">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'admin-login' %}">Admin</a></li>
+                    <li>
+                        <a href="#service">User <span>+</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="{% url 'user-login' %}">Login</a></li>
+                            <li><a href="{% url 'user-login' %}">Register</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End cryptobit main menu Area -->
+    <!--==================================================-->
+
+    <!-- ===============//breatcome area start here \\================= -->
+    <div class="clearfix" style="clear: both"></div>
+    <div class="breatcome-area style-two d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breatcome-content text-center">
+                        <div class="breatcome-title">
+                            <h1>Contact Us</h1>
+                        </div>
+                        <div class="breatcome-text">
+                            <a href=""><span>Home</span> Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix" style="clear: both"></div>
+    <!-- ===============//breatcome section end here \\================= -->
+
+    <!--==================================================-->
+    <!-- Start cryptobit contact info Area -->
+    <!--==================================================-->
+    <div class="contact-info-area pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-info-single-box wow fadeInLeft" data-wow-delay=".3s">
+                        <div class="contact-info-thumb">
+                            <img src="{% static 'assets/images/resource/contact1.png' %}" alt="" />
+                        </div>
+                        <div class="contact-info-title">
+                            <h2>Address Ifno</h2>
+                            <p>H.O: # 79-16-23/1, Syamala Nagar, RAJAHMUNDRY - 533103.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-info-single-box wow fadeInLeft" data-wow-delay=".4s">
+                        <div class="contact-info-thumb">
+                            <img src="{% static 'assets/images/resource/contact2.png' %}" alt="" />
+                        </div>
+                        <div class="contact-info-title">
+                            <h2>Phone Calls</h2>
+                            <p>
+                                +91 96037 26459 <br />
+                                +91 85002 21170
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="contact-info-single-box wow fadeInLeft" data-wow-delay=".5s">
+                        <div class="contact-info-thumb">
+                            <img src="{% static 'assets/images/resource/contact3.png' %}" alt="" />
+                        </div>
+                        <div class="contact-info-title">
+                            <h2>E-Mail Address</h2>
+                            <p>hr@rgtech.org.in revanthsspvt@rgtech.org.in</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End cryptobit contact info Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start Cryptobit contact Area -->
+    <!--==================================================-->
+    <div class="contact-form-area style-two pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="dreamit-section-title text-center upper1 pb-70">
+                    <h4>Contact Info</h4>
+                    <h1 class="section-title">Write Us Something</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="contact-form-thumb wow fadeInRight" data-wow-delay=".4s">
+                        <img src="{% static 'assets/images/resource/cartoon-bg.png' %}" alt="" />
+                        <div class="form-inner-thumb bounce-animate3">
+                            <img src="{% static 'assets/images/resource/cartoon.png' %}" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="contact-form-box wow fadeInLeft" data-wow-delay=".4s">
+                            <div class="contact-form-title">
+                                <h3>Get In Touch</h3>
+                            </div>
+                            <form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="from-box">
+                                            <input type="text" name="name" placeholder="Your Name" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                        <div class="from-box">
+                                            <input type="text" name="E-Mail" placeholder="Enter E-Mail" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="from-box">
+                                            <input type="text" name="Subject" placeholder="Subject" />
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="from-box">
+                                            <textarea name="Message" id="massage" placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="from-box">
+                                    <button type="submit">Send Message</button>
+                                </div>
+                            </form>
+                            <div id="status"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- Start Cryptobit contact Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start Cryptobit Footer Middle Area -->
+    <!--==================================================-->
+    <div class="footer-middle style-four pt-80 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="widgets-company-info pt-3 wow fadeInLeft" data-wow-delay=".4s">
+                        <div class="cryptobit-logo">
+                            <a class="logo_img" href="{% static 'home' %}" title="cryptobit">
+                                <img src="{% static 'assets/images/logo.png' %}" alt="" />
+                            </a>
+                        </div>
+                        <div class="company-info-desc">
+                            <p>
+                                Cryptocurrencies are used prim outside existing banking govern
+                                institutions hanged
+                            </p>
+                        </div>
+                        <div class="company_icon">
+                            <a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="pinterest" href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="widget-nav-menu wow fadeInLeft" data-wow-delay=".5s">
+                                <h4 class="widget-title">Catagories</h4>
+                                <div class="menu-quick-link-content">
+                                    <ul class="menu">
+                                        <li><a href="#">What is ICO</a></li>
+                                        <li><a href="#">Token</a></li>
+                                        <li><a href="#">Road Map</a></li>
+                                        <li><a href="#">Advisor</a></li>
+                                        <li><a href="#">Payments</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="widget-nav-menu upper wow fadeInLeft" data-wow-delay=".6s">
+                                <h4 class="widget-title">Useful Link</h4>
+                                <div class="menu-quick-link-content">
+                                    <ul class="menu">
+                                        <li><a href="#">Payment & TAX</a></li>
+                                        <li><a href="#">Terms of Services</a></li>
+                                        <li><a href="#">My Account </a></li>
+                                        <li><a href="#">Return Policy</a></li>
+                                        <li><a href="#">Discount</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="widget-nav-menu upper1 wow fadeInLeft" data-wow-delay=".7s">
+                                <h4 class="widget-title">Newsletter</h4>
+                                <div class="menu-quick-link">
+                                    <p>
+                                        Get now free 20% discount for all products on your first
+                                        order
+                                    </p>
+                                </div>
+                                <div class="contact-form-box-2 text-center">
+                                    <form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
+                                        <div class="from-box1">
+                                            <input type="text" name="E-Mail" placeholder="Enter Your E-Mail" />
+                                            <button type="submit">
+                                                <i class="fa fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <div id="status"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer-bottom mt-65">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-bottom-content">
+                        <div class="footer-bottom-content-copy">
+                            <p>
+                                © Cryptobit all Rights Reserved. By: <span>RG Tech</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-bottom-content">
+                        <div class="footer-bottom-menu">
+                            <ul>
+                                <li>Privacy Policy</li>
+                                <li>Terms & Condition</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-bottom-shape">
+                        <img src="{% static 'assets/images/resource/footer-b.png' %}" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End Cryptobit Footer Middle Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start scroll Area -->
+    <!--==================================================-->
+    <div class="scroll-area">
+        <div class="top-wrap">
+            <div class="go-top-btn-wraper">
+                <div class="go-top go-top-button">
+                    <i class="fas fa-arrow-up"></i>
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- Start scroll Area -->
+    <!--==================================================-->
+
+    <!-- jquery js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <!-- carousel js -->
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <!-- waypoints js -->
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <!-- wow js -->
+    <script src="{% static 'assets/js/wow.js' %}"></script>
+    <!-- imagesloaded js -->
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <!-- venobox js -->
+    <script src="{% static 'venobox/venobox.js' %}"></script>
+    <!-- ajax mail js -->
+    <script src="{% static 'assets/js/ajax-mail.js' %}"></script>
+    <!--  animated-text js -->
+    <script src="{% static 'assets/js/animated-text.js' %}"></script>
+    <!-- venobox min js -->
+    <script src="{% static 'venobox/venobox.min.js' %}"></script>
+    <!-- jquery meanmenu js -->
+    <script src="{% static 'assets/js/jquery.meanmenu.js' %}"></script>
+    <!-- jquery scrollup js -->
+    <script src="{% static 'assets/js/jquery.scrollUp.js' %}"></script>
+    <!-- theme js -->
+    <script src="{% static 'assets/js/theme.js' %}"></script>
+    <!-- range js -->
+    <script src="{% static 'assets/js/range.js' %}"></script>
+    <!-- barfiller js -->
+    <script src="{% static 'assets/js/jquery.barfiller.js' %}"></script>
+    <!--jave script -->
+    <script>
+        $(window).on("scroll", function () {
+            var scrolled = $(window).scrollTop();
+            if (scrolled > 300) $(".go-top").addClass("active");
+            if (scrolled < 300) $(".go-top").removeClass("active");
+        });
+
+        $(".go-top").on("click", function () {
+            $("html, body").animate(
+                {
+                    scrollTop: "0",
+                },
+                1200
+            );
+        });
+    </script>
+</body>
+
+</html>

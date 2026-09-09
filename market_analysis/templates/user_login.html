@@ -1,0 +1,1186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Cryptocurrency market analysis</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="56x56" href="{% static 'assets/images/fav-icon/icon.png' %}" />
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" type="text/css" media="all" />
+    <!-- carousel CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" type="text/css" media="all" />
+    <!-- theme default CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}" type="text/css" media="all" />
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" type="text/css" media="all" />
+    <!-- animated-text CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/animated-text.css' %}" type="text/css" media="all" />
+    <!-- font-awesome CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}" type="text/css" media="all" />
+    <!-- font-flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}" type="text/css" media="all" />
+    <!-- theme-default CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/theme-default.css' %}" type="text/css" media="all" />
+    <!-- meanmenu CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}" type="text/css" media="all" />
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" media="all" />
+    <!-- venobox CSS -->
+    <link rel="stylesheet" href="{% static 'venobox/venobox.css' %}" type="text/css" media="all" />
+    <!-- responsive CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        .scroll-top {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        /* SVG circle */
+        .scroll-top svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        /* CENTER THE ICON */
+        .scroll-top i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            color: #000;
+            /* change if background is dark */
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        :root {
+            --primary: #0d6efd;
+            --accent1: #4e73df;
+            --accent2: #1cc88a;
+            --header-start: rgb(255, 128, 0);
+            --header-end: #004085;
+            --footer-start: var(--accent1);
+            --footer-end: #0b5ed7;
+            --glass: rgba(255, 255, 255, 0.85);
+        }
+
+
+        nav.navmenu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        nav.navmenu a {
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+            padding: 8px 8px;
+            border-radius: 6px;
+        }
+
+        nav.navmenu a.active,
+        nav.navmenu a:hover {
+            background: linear-gradient(90deg, var(--accent1), var(--accent2));
+            color: #fff;
+            box-shadow: 0 6px 16px rgba(78, 115, 223, 0.14);
+            transform: translateY(-1px);
+        }
+
+        .mobile-nav-toggle {
+            font-size: 1.2rem;
+            color: #fff;
+            display: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 991.98px) {
+            .navmenu ul {
+                gap: 10px;
+            }
+
+            .mobile-nav-toggle {
+                display: inline-block;
+            }
+        }
+
+        /* Page title */
+        .page-title {
+            padding: 28px 0;
+            background: transparent;
+        }
+
+        .page-title .light-background {
+            /* kept for compatibility */
+        }
+
+        .page-title h1 {
+            margin: 0;
+            color: #0b1220;
+            font-weight: 700;
+        }
+
+        .breadcrumbs ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 8px;
+            color: #64748b;
+        }
+
+        .breadcrumbs a {
+            color: #64748b;
+            text-decoration: none;
+        }
+
+        /* 3D Flip card container - modernized but matches previous visual theme */
+        .card-3d-wrap {
+            perspective: 1200px;
+            width: 660px;
+            max-width: calc(100% - 40px);
+            margin: 0 auto;
+        }
+
+        .card-3d-wrapper {
+            position: relative;
+            width: 100%;
+            height: auto;
+            transform-style: preserve-3d;
+            transition: transform 700ms cubic-bezier(.2, .8, .2, 1);
+            display: flex;
+            gap: 24px;
+            align-items: stretch;
+            justify-content: center;
+        }
+
+        /* Checkbox flip toggle (hidden) */
+        .checkbox {
+            display: none;
+        }
+
+        /* When checked, flip the wrapper */
+        .checkbox:checked~.card-3d-wrap .card-3d-wrapper {
+            transform: rotateY(-180deg);
+        }
+
+        .card-front,
+        .card-back {
+            width: 360px;
+            min-height: 520px;
+            background: linear-gradient(135deg, #ffffff, #f8f9fa);
+            border-radius: 12px;
+            backface-visibility: hidden;
+            box-shadow: 0 12px 32px rgba(16, 24, 40, 0.08);
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .card-front {
+            transform: rotateY(0deg);
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* When wrapper flips, show back side properly (rotate the tot wrapper) */
+        .card-3d-wrapper .card-back {
+            transform: rotateY(180deg);
+        }
+
+        /* content inside forms */
+        .section {
+            width: 100%;
+        }
+
+        .form-style {
+            height: 44px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 8px 12px;
+        }
+
+        .input-icon {
+            font-size: 1.05rem;
+            opacity: .8;
+        }
+
+        .btn {
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-weight: 700;
+        }
+
+        .btn-info {
+            background: linear-gradient(90deg, var(--accent1), var(--accent2));
+            border: none;
+            color: #fff;
+        }
+
+        .btn-success {
+            background: #1cc88a;
+            border: none;
+            color: #fff;
+        }
+
+        .btn-warning {
+            background: #f59e0b;
+            border: none;
+            color: #fff;
+        }
+
+        .shadow-sm {
+            box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
+        }
+
+        .form-image img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+
+        /* Preloader and Dual-dot spinner */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(7, 10, 20, 0.45);
+            z-index: 2000;
+        }
+
+        .dual-dot {
+            width: 80px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+        }
+
+        .dual-dot .dot {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: linear-gradient(90deg, var(--accent1), var(--accent2));
+            box-shadow: 0 8px 20px rgba(78, 115, 223, 0.18);
+            animation: dualPulse 1s infinite ease-in-out;
+        }
+
+        .dual-dot .dot.second {
+            animation-delay: .35s;
+            background: linear-gradient(90deg, var(--header-end), var(--accent1));
+        }
+
+        @keyframes dualPulse {
+            0% {
+                transform: scale(0.7);
+                opacity: 0.45;
+            }
+
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(0.7);
+                opacity: 0.45;
+            }
+        }
+
+        /* Centered fade overlay (success/info) */
+        .center-overlay {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2100;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity .35s ease;
+        }
+
+        .center-overlay.show {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        .center-overlay .card {
+            min-width: 280px;
+            max-width: 90%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.95));
+            border-radius: 12px;
+            padding: 18px 20px;
+            box-shadow: 0 20px 60px rgba(2, 6, 23, 0.35);
+            text-align: center;
+            transform: translateY(-6px);
+            animation: overlayPop .36s ease both;
+        }
+
+        @keyframes overlayPop {
+            from {
+                transform: translateY(8px) scale(.98);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .center-overlay .icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .center-overlay.success .icon {
+            color: #10b981;
+        }
+
+        /* green */
+        .center-overlay.error .icon {
+            color: #ef4444;
+        }
+
+        /* red */
+        .center-overlay.info .icon {
+            color: #0ea5e9;
+        }
+
+        /* blue */
+
+        /* small responsiveness */
+        @media (max-width: 900px) {
+            .card-3d-wrap {
+                width: 100%;
+            }
+
+            .card-front,
+            .card-back {
+                width: 320px;
+                min-height: auto;
+            }
+
+            .card-3d-wrapper {
+                gap: 16px;
+                justify-content: center;
+            }
+        }
+
+        /* small helper text styles to match previous pages */
+        .text-light {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .text-primary {
+            color: var(--accent1);
+            font-weight: 700;
+        }
+
+
+
+        .glass-bg {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            transition: all 0.5s ease;
+        }
+
+        .toggle-bell {
+            background: rgb(192, 192, 192);
+            border-radius: 50px;
+            padding: 10px 25px;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .toggle-bell:hover {
+            background: rgb(64, 128, 128);
+        }
+
+        .toggle-bell i {
+            font-size: 1.4rem;
+            margin-right: 8px;
+            animation: ring 1.5s ease infinite;
+        }
+
+        @keyframes ring {
+            0% {
+                transform: rotate(0);
+            }
+
+            10% {
+                transform: rotate(15deg);
+            }
+
+            20% {
+                transform: rotate(-10deg);
+            }
+
+            30% {
+                transform: rotate(5deg);
+            }
+
+            40% {
+                transform: rotate(-5deg);
+            }
+
+            50% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(0);
+            }
+        }
+
+        .auth-form {
+            display: none;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .auth-form.active {
+            display: block !important;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- loder -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+        <div class="loder-section left-section"></div>
+        <div class="loder-section right-section"></div>
+    </div>
+    <!--==================================================-->
+    <!-- Start cryptobit Main Menu Area -->
+    <!--==================================================-->
+    <div id="sticky-header" class="cryptobit_nav_manu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="logo">
+                        <a class="logo_img" href="{% static 'home' %}" title="cryptobit">
+                            <img src="{% static 'assets/images/logo.png' %}" alt="" />
+                        </a>
+                        <a class="main_sticky" href="{% static 'home' %}" title="cryptobit">
+                            <img src="{% static 'assets/images/logo.png' %}" alt="astute" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <nav class="cryptobit_menu">
+                        <ul class="nav_scroll">
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'admin-login' %}">Admin</a></li>
+                            <li>
+                                <a href="#service">User <span>+</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="{% url 'user-login' %}">Login</a></li>
+                                    <li><a href="{% url 'user-login' %}">Register</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                        <div class="header-button">
+                            <a href="{% url 'user-login' %}"><i class="far fa-user"></i> Register</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Cryptobit Mobile Menu Area -->
+    <div class="mobile-menu-area d-sm-block d-md-block d-lg-none">
+        <div class="mobile-menu">
+            <nav class="cripto_menu">
+                <ul class="nav_scroll">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'admin-login' %}">Admin</a></li>
+                    <li>
+                        <a href="#service">User <span>+</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="{% url 'user-login' %}">Login</a></li>
+                            <li><a href="{% url 'user-login' %}">Register</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End cryptobit main menu Area -->
+    <!--==================================================-->
+
+    <!-- ===============//breatcome area start here \\================= -->
+    <div class="clearfix" style="clear: both"></div>
+    <div class="breatcome-area style-two d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breatcome-content text-center">
+                        <div class="breatcome-title">
+                            <h1>User Login / Register</h1>
+                        </div>
+                        <div class="breatcome-text">
+                            <a href=""><span>Home</span> User Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix" style="clear: both"></div>
+    <!-- ===============//breatcome section end here \\================= -->
+
+
+    <!--==================================================-->
+    <!-- Start Cryptobit contact Area -->
+    <!--==================================================-->
+    <div class="contact-form-area style-two pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="dreamit-section-title text-center upper1 pb-70">
+                    <h4>User Access</h4>
+                    <h1 class="section-title">Login To Your Account</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="contact-form-thumb wow fadeInRight" data-wow-delay=".4s">
+
+                        <div class="form-inner-thumb bounce-animate3">
+                            <img src="{% static 'assets/images/resource/user-login.jpg' %}" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="contact-form-box wow fadeInLeft" data-wow-delay=".4s">
+                            <div class="contact-form-title">
+                                <!-- Toggle switch -->
+                                <div class="toggle-wrapper text-center mb-4">
+                                    <div class="toggle-bell" id="toggleBell">
+                                        <i class="bi bi-bell-fill text text-primary"></i>
+                                        <span id="toggleText" class="ms-2 fw-bold text-dark">Registration Mode</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <form id="loginForm" action="{% url 'user_login_check' %}" method="post"
+                                class="auth-form active input-label" novalidate>
+                                {% csrf_token %}
+
+                                <h4 class="mb-4 text-center text-light fw-bold">Log In</h4>
+
+                                <div class="row">
+
+                                    <div class="col-lg-12">
+                                        <div class="from-box">
+                                            <input type="email" name="email" id="loginEmail" placeholder="Your Email"
+                                                required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="from-box">
+                                            <input type="password" name="password" id="loginPassword"
+                                                placeholder="Your Password" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12" id="loginOtpSection" style="display:none;">
+                                        <div class="from-box">
+                                            <input type="text" id="loginOtp" placeholder="Enter OTP">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 from-box">
+                                        <button type="button" id="loginSendOtp" onclick="sendOtp('login')">
+                                            Send OTP
+                                        </button>
+                                    </div>
+
+                                    <div class="col-lg-12 from-box">
+                                        <button type="button" id="loginVerifyOtp" onclick="verifyOtp('login')"
+                                            style="display:none;">
+                                            Verify OTP
+                                        </button>
+                                    </div>
+
+                                    <div class="col-lg-12 from-box">
+                                        <button type="submit" id="loginSubmit" style="display:none;">
+                                            Submit
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                                <p class="form-messages mt-3"></p>
+                            </form>
+                            <form id="registerForm" action="{% url 'user_register' %}" method="post"
+                                class="auth-form input-label" style="display:none;" novalidate>
+                                {% csrf_token %}
+
+                                <h4 class="mb-4 text-center text-light fw-bold">Register</h4>
+
+                                <div class="row">
+
+                                    <div class="col-lg-12">
+                                        <div class="from-box">
+                                            <input type="text" name="name" placeholder="Enter Full Name" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="from-box">
+                                            <input type="email" id="registerEmail" name="email"
+                                                placeholder="Enter Email" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="from-box">
+                                            <input type="text" name="mobile" placeholder="Enter Mobile" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12">
+                                        <div class="from-box">
+                                            <input type="password" name="password" placeholder="Enter Password"
+                                                required>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12" id="registerOtpSection" style="display:none;">
+                                        <div class="from-box">
+                                            <input type="text" id="registerOtp" placeholder="Enter OTP">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 from-box">
+                                        <button type="button" id="registerSendOtp" onclick="sendOtp('register')">
+                                            Send OTP
+                                        </button>
+                                    </div>
+
+                                    <div class="col-lg-12 from-box">
+                                        <button type="button" id="registerVerifyOtp" onclick="verifyOtp('register')"
+                                            style="display:none;">
+                                            Verify OTP
+                                        </button>
+                                    </div>
+
+                                    <div class="col-lg-12 from-box">
+                                        <button type="submit" id="registerSubmit" style="display:none;">
+                                            Submit
+                                        </button>
+                                    </div>
+
+                                </div>
+
+                                <p class="form-messages mt-3"></p>
+                            </form>
+
+                            <div id="status"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- Start Cryptobit contact Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start Cryptobit Footer Middle Area -->
+    <!--==================================================-->
+    <div class="footer-middle style-four pt-80 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="widgets-company-info pt-3 wow fadeInLeft" data-wow-delay=".4s">
+                        <div class="cryptobit-logo">
+                            <a class="logo_img" href="{% static 'home' %}" title="cryptobit">
+                                <img src="{% static 'assets/images/logo.png' %}" alt="" />
+                            </a>
+                        </div>
+                        <div class="company-info-desc">
+                            <p>
+                                Cryptocurrencies are used prim outside existing banking govern
+                                institutions hanged
+                            </p>
+                        </div>
+                        <div class="company_icon">
+                            <a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="pinterest" href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="widget-nav-menu wow fadeInLeft" data-wow-delay=".5s">
+                                <h4 class="widget-title">Catagories</h4>
+                                <div class="menu-quick-link-content">
+                                    <ul class="menu">
+                                        <li><a href="#">What is ICO</a></li>
+                                        <li><a href="#">Token</a></li>
+                                        <li><a href="#">Road Map</a></li>
+                                        <li><a href="#">Advisor</a></li>
+                                        <li><a href="#">Payments</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="widget-nav-menu upper wow fadeInLeft" data-wow-delay=".6s">
+                                <h4 class="widget-title">Useful Link</h4>
+                                <div class="menu-quick-link-content">
+                                    <ul class="menu">
+                                        <li><a href="#">Payment & TAX</a></li>
+                                        <li><a href="#">Terms of Services</a></li>
+                                        <li><a href="#">My Account </a></li>
+                                        <li><a href="#">Return Policy</a></li>
+                                        <li><a href="#">Discount</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="widget-nav-menu upper1 wow fadeInLeft" data-wow-delay=".7s">
+                                <h4 class="widget-title">Newsletter</h4>
+                                <div class="menu-quick-link">
+                                    <p>
+                                        Get now free 20% discount for all products on your first
+                                        order
+                                    </p>
+                                </div>
+                                <div class="contact-form-box-2 text-center">
+                                    <form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
+                                        <div class="from-box1">
+                                            <input type="text" name="E-Mail" placeholder="Enter Your E-Mail" />
+                                            <button type="submit">
+                                                <i class="fa fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <div id="status"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer-bottom mt-65">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-bottom-content">
+                        <div class="footer-bottom-content-copy">
+                            <p>
+                                © Cryptobit all Rights Reserved. By: <span>RG Tech</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-bottom-content">
+                        <div class="footer-bottom-menu">
+                            <ul>
+                                <li>Privacy Policy</li>
+                                <li>Terms & Condition</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-bottom-shape">
+                        <img src="{% static 'assets/images/resource/footer-b.png' %}" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End Cryptobit Footer Middle Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start scroll Area -->
+    <!--==================================================-->
+    <div class="scroll-area">
+        <div class="top-wrap">
+            <div class="go-top-btn-wraper">
+                <div class="go-top go-top-button">
+                    <i class="fas fa-arrow-up"></i>
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- Start scroll Area -->
+    <!--==================================================-->
+    <script>
+        // ========== INITIAL PAGE SETUP ==========
+
+
+        // ========== OVERLAY POPUP ==========
+        function showOverlay(message, type = 'success', timeout = 2000) {
+            let overlay = document.getElementById('centerOverlay');
+            if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.id = 'centerOverlay';
+                overlay.className = 'center-overlay';
+                overlay.innerHTML = `
+                <div id="overlayIcon"></div>
+                <div id="overlayMessage" class="fw-bold mt-2"></div>
+            `;
+                document.body.appendChild(overlay);
+            }
+
+            const icon = document.getElementById('overlayIcon');
+            const msg = document.getElementById('overlayMessage');
+            overlay.className = 'center-overlay ' + (type === 'error' ? 'error' : (type === 'info' ? 'info' : 'success'));
+            icon.innerHTML = (type === 'error')
+                ? '<i class="bi bi-x-circle-fill"></i>'
+                : (type === 'info')
+                    ? '<i class="bi bi-info-circle-fill"></i>'
+                    : '<i class="bi bi-check-circle-fill"></i>';
+            msg.textContent = message;
+
+            overlay.classList.add('show');
+            setTimeout(() => overlay.classList.remove('show'), timeout);
+        }
+
+        // ========== SEND OTP ==========
+        function sendOtp(type) {
+
+            // ================= LOGIN =================
+            if (type === "login") {
+
+                const email = document.getElementById("loginEmail").value.trim();
+                const password = document.getElementById("loginPassword").value.trim();
+
+                if (email === "" || password === "") {
+                    Swal.fire({ icon: "warning", title: "Required", text: "Enter Email & Password" });
+                    return;
+                }
+
+                fetch(`/user/check-login/?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`)
+                    .then(r => r.text())
+                    .then(res => {
+                        if (res !== "valid") {
+                            Swal.fire({ icon: "error", title: "Invalid", text: "Incorrect Email or Password" });
+                        } else {
+                            sendOtpNow(email, type);
+                        }
+                    });
+            }
+
+            // ================= REGISTER =================
+            else {
+
+                const form = document.getElementById("registerForm");
+
+                const name = form.querySelector('input[name="name"]').value.trim();
+                const email = document.getElementById("registerEmail").value.trim();
+                const mobile = form.querySelector('input[name="mobile"]').value.trim();
+                const password = form.querySelector('input[name="password"]').value.trim();
+
+                if (name === "" || email === "" || mobile === "" || password === "") {
+                    Swal.fire({ icon: "warning", title: "Fill All Fields" });
+                    return;
+                }
+
+                fetch(`/user/check-register/?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&mobile=${encodeURIComponent(mobile)}&password=${encodeURIComponent(password)}`)
+                    .then(r => r.text())
+                    .then(res => {
+                        if (res === "empty") {
+                            Swal.fire({ icon: "warning", title: "Fill All Fields" });
+                        }
+                        else if (res === "exists") {
+                            Swal.fire({ icon: "error", title: "Email Exists" });
+                        }
+                        else {
+                            sendOtpNow(email, type);
+                        }
+                    });
+            }
+        }
+
+
+        // ================= SEND OTP =================
+        function sendOtpNow(email, type) {
+            fetch("/user/send-otp/?email=" + encodeURIComponent(email))
+                .then(r => r.text())
+                .then(res => {
+                    if (res === "sent") {
+                        Swal.fire({ icon: "success", title: "OTP Sent to your Email" });
+
+                        document.getElementById(type + 'SendOtp').style.display = 'none';
+                        document.getElementById(type + 'OtpSection').style.display = 'block';
+                        document.getElementById(type + 'VerifyOtp').style.display = 'block';
+                    } else {
+                        Swal.fire({ icon: "error", title: "OTP Failed", text: "Email sending failed!" });
+                    }
+                });
+        }
+
+
+        // ================= VERIFY OTP =================
+        function verifyOtp(type) {
+
+            const email = (type === 'login')
+                ? document.getElementById("loginEmail").value.trim()
+                : document.getElementById("registerEmail").value.trim();
+
+            const otp = (type === 'login')
+                ? document.getElementById("loginOtp").value.trim()
+                : document.getElementById("registerOtp").value.trim();
+
+            if (otp === "") {
+                Swal.fire({ icon: 'warning', title: 'OTP Required', text: 'Please enter the OTP.' });
+                return;
+            }
+
+            fetch(`/user/verify-otp/?email=${encodeURIComponent(email)}&otp=${encodeURIComponent(otp)}`)
+                .then(r => r.text())
+                .then(res => {
+
+                    if (res === "verified") {
+                        Swal.fire({ icon: 'success', title: 'OTP Verified' });
+
+                        document.getElementById(type + 'VerifyOtp').style.display = 'none';
+                        document.getElementById(type + 'OtpSection').style.display = 'none';
+                        document.getElementById(type + 'Submit').style.display = 'block';
+
+                    } else {
+                        Swal.fire({ icon: 'error', title: 'Invalid OTP', text: 'Wrong OTP!' });
+                    }
+                });
+        }
+
+
+        // ========== OPTIONAL FORM FEEDBACK ==========
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+
+            loginForm?.addEventListener('submit', function () {
+                showOverlay('Logging in...', 'info', 1200);
+            });
+
+            registerForm?.addEventListener('submit', function () {
+                showOverlay('Registering...', 'info', 1200);
+            });
+        });
+    </script>
+
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        let successMsg = /*[[${success}]]*/ null;
+        let errorMsg = /*[[${error}]]*/ null;
+
+        if (successMsg) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: successMsg,
+                confirmButtonColor: '#28a745',
+                timer: 2500
+            });
+        }
+
+        if (errorMsg) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: errorMsg,
+                confirmButtonColor: '#d33',
+                timer: 2500
+            });
+        }
+        /*]]>*/
+
+        const toggleBell = document.getElementById("toggleBell");
+        const toggleText = document.getElementById("toggleText");
+
+        const loginForm = document.getElementById("loginForm");
+        const registerForm = document.getElementById("registerForm");
+        const authImage = document.getElementById("authImageSrc");
+
+        let isLogin = true;
+
+        // Initial State
+        registerForm.classList.remove("active");
+        registerForm.style.display = "none";
+        loginForm.classList.add("active");
+
+        toggleBell.addEventListener("click", () => {
+            isLogin = !isLogin;
+
+            if (isLogin) {
+                // LOGIN
+                loginForm.style.display = "block";
+                registerForm.style.display = "none";
+
+                loginForm.classList.add("active");
+                registerForm.classList.remove("active");
+
+                toggleText.innerText = "Registration Mode";
+
+            } else {
+                // REGISTER
+                registerForm.style.display = "block";
+                loginForm.style.display = "none";
+
+                registerForm.classList.add("active");
+                loginForm.classList.remove("active");
+
+                toggleText.innerText = "Login Mode";
+            }
+        });
+    </script>
+    {% if success %}
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Registration Successful 🎉',
+            text: "{{ success|escapejs }}",
+            confirmButtonColor: '#28a745'
+        });
+    </script>
+    {% endif %}
+
+    {% if error %}
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: "{{ error|escapejs }}",
+            confirmButtonColor: '#d33'
+        });
+    </script>
+    {% endif %}
+    <!-- jquery js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <!-- carousel js -->
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <!-- waypoints js -->
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <!-- wow js -->
+    <script src="{% static 'assets/js/wow.js' %}"></script>
+    <!-- imagesloaded js -->
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <!-- venobox js -->
+    <script src="{% static 'venobox/venobox.js' %}"></script>
+    <!-- ajax mail js -->
+    <script src="{% static 'assets/js/ajax-mail.js' %}"></script>
+    <!--  animated-text js -->
+    <script src="{% static 'assets/js/animated-text.js' %}"></script>
+    <!-- venobox min js -->
+    <script src="{% static 'venobox/venobox.min.js' %}"></script>
+    <!-- jquery meanmenu js -->
+    <script src="{% static 'assets/js/jquery.meanmenu.js' %}"></script>
+    <!-- jquery scrollup js -->
+    <script src="{% static 'assets/js/jquery.scrollUp.js' %}"></script>
+    <!-- theme js -->
+    <script src="{% static 'assets/js/theme.js' %}"></script>
+    <!-- range js -->
+    <script src="{% static 'assets/js/range.js' %}"></script>
+    <!-- barfiller js -->
+    <script src="{% static 'assets/js/jquery.barfiller.js' %}"></script>
+    <!--jave script -->
+    <script>
+        $(window).on("scroll", function () {
+            var scrolled = $(window).scrollTop();
+            if (scrolled > 300) $(".go-top").addClass("active");
+            if (scrolled < 300) $(".go-top").removeClass("active");
+        });
+
+        $(".go-top").on("click", function () {
+            $("html, body").animate(
+                {
+                    scrollTop: "0",
+                },
+                1200
+            );
+        });
+    </script>
+</body>
+
+</html>

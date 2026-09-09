@@ -1,0 +1,842 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Cryptocurrency market analysis</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="56x56" href="{% static 'assets/images/fav-icon/icon.png' %}" />
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" type="text/css" media="all" />
+    <!-- carousel CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" type="text/css" media="all" />
+    <!-- theme default CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}" type="text/css" media="all" />
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" type="text/css" media="all" />
+    <!-- animated-text CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/animated-text.css' %}" type="text/css" media="all" />
+    <!-- font-awesome CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}" type="text/css" media="all" />
+    <!-- font-flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}" type="text/css" media="all" />
+    <!-- theme-default CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/theme-default.css' %}" type="text/css" media="all" />
+    <!-- meanmenu CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}" type="text/css" media="all" />
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" media="all" />
+    <!-- venobox CSS -->
+    <link rel="stylesheet" href="{% static 'venobox/venobox.css' %}" type="text/css" media="all" />
+    <!-- responsive CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .scroll-top {
+            position: fixed;
+            right: 30px;
+            bottom: 30px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+
+        /* SVG circle */
+        .scroll-top svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotate(-90deg);
+        }
+
+        /* CENTER THE ICON */
+        .scroll-top i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            color: #000;
+            /* change if background is dark */
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        :root {
+            --primary: #0d6efd;
+            --accent1: #4e73df;
+            --accent2: #1cc88a;
+            --muted: #6c757d;
+            --card-bg: rgba(255, 255, 255, 0.98);
+            --glass: rgba(255, 255, 255, 0.06);
+            --header-gradient-start: rgb(255, 128, 0);
+            --header-gradient-end: #004085;
+        }
+
+
+
+
+        /* -----------------------------
+       Page Title
+       ----------------------------- */
+        .page-title {
+            padding: 28px 0;
+        }
+
+        .light-background {
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        /* -----------------------------
+       Hero / Login area
+       ----------------------------- */
+        .hero {
+            padding: 48px 0;
+            position: relative;
+            overflow: visible;
+        }
+
+        .dark-background {
+            background: linear-gradient(180deg, rgba(4, 18, 84, 0.04), rgba(255, 255, 255, 0));
+            border-radius: 12px;
+            padding-bottom: 34px;
+        }
+
+        /* Reuse admin css classes but ensure responsive layout */
+        .container-login100 {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .login100-form-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--accent1);
+            display: block;
+            text-align: center;
+        }
+
+        /* Buttons glow */
+        .btn-glow {
+            background: linear-gradient(90deg, var(--accent1), var(--accent2));
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(78, 115, 223, 0.12);
+        }
+
+        .btn-glow:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Input look aligned to admin main.css but ensure visibility */
+        .input100 {
+            width: 100%;
+            padding: 12px 40px 12px 14px;
+            border-radius: 8px;
+            border: 1px solid rgba(16, 24, 40, 0.06);
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.03);
+        }
+
+        .wrap-input100 {
+            position: relative;
+        }
+
+        .symbol-input100 {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+        }
+
+        /* Right image card */
+        .login100-pic {
+            border-radius: 12px;
+            padding: 12px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(250, 250, 250, 0.9));
+            box-shadow: 0 12px 30px rgba(16, 24, 40, 0.04);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Footer (match Home page) */
+
+
+        /* Scroll Top */
+        .scroll-top {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: var(--accent1);
+            color: #fff;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(78, 115, 223, 0.14);
+            z-index: 60;
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 991.98px) {
+            .sitename {
+                font-size: 1.05rem;
+            }
+
+            .navmenu ul {
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .container-login100 {
+                gap: 16px;
+            }
+
+            .wrap-login100,
+            .login100-pic {
+                width: 100%;
+                max-width: 100%;
+                padding: 16px;
+            }
+        }
+
+        /* -----------------------------
+       Dual-dot / AI-style pulse preloader
+       ----------------------------- */
+
+        .dual-pulse .dot:nth-child(2) {
+            animation-delay: 0.18s;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.6);
+                opacity: 0.6;
+                filter: blur(0px);
+            }
+
+            50% {
+                transform: scale(1.25);
+                opacity: 1;
+                filter: blur(0);
+            }
+
+            100% {
+                transform: scale(0.6);
+                opacity: 0.6;
+            }
+        }
+
+        /* -----------------------------
+       Centered success overlay (fade in/out)
+       ----------------------------- */
+    </style>
+</head>
+
+<body>
+    <!-- loder -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+        <div class="loder-section left-section"></div>
+        <div class="loder-section right-section"></div>
+    </div>
+    <!--==================================================-->
+    <!-- Start cryptobit Main Menu Area -->
+    <!--==================================================-->
+    <div id="sticky-header" class="cryptobit_nav_manu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="logo">
+                        <a class="logo_img" href="{% static 'home' %}" title="cryptobit">
+                            <img src="{% static 'assets/images/logo.png' %}" alt="" />
+                        </a>
+                        <a class="main_sticky" href="{% static 'home' %}" title="cryptobit">
+                            <img src="{% static 'assets/images/logo.png' %}" alt="astute" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <nav class="cryptobit_menu">
+                        <ul class="nav_scroll">
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'admin-login' %}">Admin</a></li>
+                            <li>
+                                <a href="#service">User <span>+</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="{% url 'user-login' %}">Login</a></li>
+                                    <li><a href="{% url 'user-login' %}">Register</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                        <div class="header-button">
+                            <a href="{% url 'user-login' %}"><i class="far fa-user"></i> Register</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Cryptobit Mobile Menu Area -->
+    <div class="mobile-menu-area d-sm-block d-md-block d-lg-none">
+        <div class="mobile-menu">
+            <nav class="cripto_menu">
+                <ul class="nav_scroll">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'admin-login' %}">Admin</a></li>
+                    <li>
+                        <a href="#service">User <span>+</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="{% url 'user-login' %}">Login</a></li>
+                            <li><a href="{% url 'user-login' %}">Register</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End cryptobit main menu Area -->
+    <!--==================================================-->
+
+    <!-- ===============//breatcome area start here \\================= -->
+    <div class="clearfix" style="clear: both"></div>
+    <div class="breatcome-area style-two d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breatcome-content text-center">
+                        <div class="breatcome-title">
+                            <h1>Admin Login</h1>
+                        </div>
+                        <div class="breatcome-text">
+                            <a href=""><span>Home</span> Admin Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix" style="clear: both"></div>
+    <!-- ===============//breatcome section end here \\================= -->
+
+    <!--==================================================-->
+    <!-- Start cryptobit contact info Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- End cryptobit contact info Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start Cryptobit contact Area -->
+    <!--==================================================-->
+    <div class="contact-form-area style-two pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="dreamit-section-title text-center upper1 pb-70">
+                    <h4>Welcome Admin</h4>
+                    <h1 class="section-title">Sign In To Continue</h1>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="contact-form-thumb wow fadeInRight" data-wow-delay=".4s">
+
+                        <div class="form-inner-thumb bounce-animate3 " style="height: 300px;">
+                            <img src="{% static 'assets/images/resource/adminlogin.jpg' %}" height="400px" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="contact-form-box wow fadeInLeft" data-wow-delay=".4s">
+                            <div class="contact-form-title">
+                                <h3>Admin Login</h3>
+                            </div>
+                            <form action="{% url 'admin_login_check' %}" method="post" id="adminLoginForm"
+                                class="main-form">
+
+                                {% csrf_token %}
+
+                                <span class="done-msg"></span>
+
+                                <div class="row">
+
+                                    <!-- EMAIL -->
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="from-box">
+                                            <input type="email" name="email" id="email" placeholder="Email *"
+                                                required />
+                                        </div>
+                                    </div>
+
+                                    <!-- PASSWORD -->
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="from-box">
+                                            <input type="password" name="password" id="password"
+                                                placeholder="Password *" required />
+                                        </div>
+                                    </div>
+
+                                    <!-- OTP -->
+                                    <div class="col-lg-12" id="otpSection" style="display:none;">
+                                        <div class="from-box">
+                                            <input type="text" id="otp" name="otp" placeholder="Enter OTP" />
+                                        </div>
+                                    </div>
+
+                                    <!-- SEND OTP -->
+                                    <div class="col-lg-12" id="sendOtpBtnContainer">
+                                        <div class="from-box">
+                                            <button type="button" onclick="sendOtp()" class="w-100">
+                                                Send OTP
+                                            </button>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- VERIFY OTP -->
+                                    <div class="col-lg-12" id="verifyOtpBtnContainer" style="display:none;">
+                                        <div class="from-box">
+                                            <button type="button" onclick="verifyOtp()" class="w-100">
+                                                Verify OTP
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- LOGIN -->
+                                    <div class="col-lg-12" id="loginBtnContainer" style="display:none;">
+                                        <div class="from-box">
+                                            <button type="submit" class="w-100">
+                                                Login
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <!-- MESSAGE AREA -->
+                                <p class="form-messages mt-3 text-center"></p>
+
+                                <div class="text-center mt-3">
+                                    <span>Forgot </span>
+                                    <a href="#">Username / Password?</a>
+                                </div>
+
+                            </form>
+
+                            <div id="status"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- Start Cryptobit contact Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start Cryptobit Footer Middle Area -->
+    <!--==================================================-->
+    <div class="footer-middle style-four pt-80 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="widgets-company-info pt-3 wow fadeInLeft" data-wow-delay=".4s">
+                        <div class="cryptobit-logo">
+                            <a class="logo_img" href="{% static 'home' %}" title="cryptobit">
+                                <img src="{% static 'assets/images/logo.png' %}" alt="" />
+                            </a>
+                        </div>
+                        <div class="company-info-desc">
+                            <p>
+                                Cryptocurrencies are used prim outside existing banking govern
+                                institutions hanged
+                            </p>
+                        </div>
+                        <div class="company_icon">
+                            <a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="pinterest" href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="widget-nav-menu wow fadeInLeft" data-wow-delay=".5s">
+                                <h4 class="widget-title">Catagories</h4>
+                                <div class="menu-quick-link-content">
+                                    <ul class="menu">
+                                        <li><a href="#">What is ICO</a></li>
+                                        <li><a href="#">Token</a></li>
+                                        <li><a href="#">Road Map</a></li>
+                                        <li><a href="#">Advisor</a></li>
+                                        <li><a href="#">Payments</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="widget-nav-menu upper wow fadeInLeft" data-wow-delay=".6s">
+                                <h4 class="widget-title">Useful Link</h4>
+                                <div class="menu-quick-link-content">
+                                    <ul class="menu">
+                                        <li><a href="#">Payment & TAX</a></li>
+                                        <li><a href="#">Terms of Services</a></li>
+                                        <li><a href="#">My Account </a></li>
+                                        <li><a href="#">Return Policy</a></li>
+                                        <li><a href="#">Discount</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="widget-nav-menu upper1 wow fadeInLeft" data-wow-delay=".7s">
+                                <h4 class="widget-title">Newsletter</h4>
+                                <div class="menu-quick-link">
+                                    <p>
+                                        Get now free 20% discount for all products on your first
+                                        order
+                                    </p>
+                                </div>
+                                <div class="contact-form-box-2 text-center">
+                                    <form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
+                                        <div class="from-box1">
+                                            <input type="text" name="E-Mail" placeholder="Enter Your E-Mail" />
+                                            <button type="submit">
+                                                <i class="fa fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <div id="status"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer-bottom mt-65">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-bottom-content">
+                        <div class="footer-bottom-content-copy">
+                            <p>
+                                © Cryptobit all Rights Reserved. By: <span>RG Tech</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-bottom-content">
+                        <div class="footer-bottom-menu">
+                            <ul>
+                                <li>Privacy Policy</li>
+                                <li>Terms & Condition</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-bottom-shape">
+                        <img src="{% static 'assets/images/resource/footer-b.png' %}" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End Cryptobit Footer Middle Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start scroll Area -->
+    <!--==================================================-->
+    <div class="scroll-area">
+        <div class="top-wrap">
+            <div class="go-top-btn-wraper">
+                <div class="go-top go-top-button">
+                    <i class="fas fa-arrow-up"></i>
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- Start scroll Area -->
+    <!--==================================================-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+
+        function sendOtp() {
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            if (!email || !password) {
+                Swal.fire({
+                    icon: "warning",
+                    title: "Required",
+                    text: "Enter email and password first."
+                });
+                return;
+            }
+
+            showPreloader(true);
+
+            fetch(
+                "/admin/send-otp/?email=" +
+                encodeURIComponent(email) +
+                "&password=" +
+                encodeURIComponent(password)
+            )
+                .then(res => res.text())
+                .then(result => {
+                    result = result.trim();   // ⭐ IMPORTANT
+                    console.log("Server response:", result);
+                    showPreloader(false);
+
+                    if (result === "sent") {
+                        Swal.fire({
+                            icon: "success",
+                            title: "OTP Sent",
+                            text: "OTP sent to admin email.",
+                            timer: 2000,
+                            showConfirmButton: false
+                        });
+
+                        document.getElementById("otpSection").style.display = "block";
+                        document.getElementById("sendOtpBtnContainer").style.display = "none";
+                        document.getElementById("verifyOtpBtnContainer").style.display = "block";
+                    }
+                    else if (result === "invalid_user") {
+                        Swal.fire({
+                            icon: "error",
+                            title: "Unauthorized",
+                            text: "Not a superuser email."
+                        });
+                    }
+                    else if (result === "invalid_password") {
+                        Swal.fire({
+                            icon: "error",
+                            title: "Wrong Password",
+                            text: "Password is incorrect."
+                        });
+                    }
+                    else {
+                        Swal.fire({
+                            icon: "error",
+                            title: "Error",
+                            text: "Something went wrong."
+                        });
+                    }
+                });
+        }
+
+
+        function verifyOtp() {
+            const email = document.getElementById("email").value.trim();
+            const otp = document.getElementById("otp").value.trim();
+
+            if (!otp) {
+                Swal.fire({
+                    icon: "warning",
+                    title: "OTP Required",
+                    text: "Please enter the OTP sent to your email.",
+                });
+                return;
+            }
+
+            showPreloader(true);
+
+            fetch("/admin/verify-otp/?email=" + encodeURIComponent(email) + "&otp=" + encodeURIComponent(otp))
+                .then(response => response.text())
+                .then(result => {
+                    showPreloader(false);
+
+                    if (result === "verified") {
+
+                        Swal.fire({
+                            icon: "success",
+                            title: "OTP Verified!",
+                            text: "OTP verified. Please click Login to continue.",
+                            timer: 1800,
+                            showConfirmButton: false
+                        });
+
+                        // Unlock login button only
+                        document.getElementById("verifyOtpBtnContainer").style.display = "none";
+                        document.getElementById("otpSection").style.display = "none";
+                        document.getElementById("loginBtnContainer").style.display = "block";
+
+                    } else {
+                        Swal.fire({
+                            icon: "error",
+                            title: "Invalid OTP",
+                            text: "Incorrect or expired OTP. Please try again.",
+                        });
+                    }
+                })
+                .catch(() => {
+                    showPreloader(false);
+                    Swal.fire({
+                        icon: "error",
+                        title: "Error",
+                        text: "Something went wrong while verifying OTP.",
+                    });
+                });
+        }
+
+
+        function showPreloader(show) {
+            const pre = document.getElementById('preloader');
+            if (!pre) return;
+            pre.style.display = show ? 'flex' : 'none';
+        }
+
+        const overlay = document.getElementById('successOverlay');
+        const overlayCloseBtn = document.getElementById('overlayCloseBtn');
+
+        function showOverlay(title, message, autoHideMs) {
+            document.getElementById('overlayTitle').textContent = title || 'Success';
+            document.getElementById('overlayMessage').textContent = message || '';
+            overlay.classList.add('show');
+            overlay.setAttribute('aria-hidden', 'false');
+            if (autoHideMs && autoHideMs > 0) setTimeout(hideOverlay, autoHideMs);
+        }
+
+        function hideOverlay() {
+            overlay.classList.remove('show');
+            overlay.setAttribute('aria-hidden', 'true');
+        }
+        overlayCloseBtn && overlayCloseBtn.addEventListener('click', hideOverlay);
+
+        document.getElementById('adminLoginForm').addEventListener('submit', function () {
+            showPreloader(true);
+        });
+
+        var scrollTopBtn = document.getElementById('scroll-top');
+        if (scrollTopBtn) {
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 400) {
+                    scrollTopBtn.style.opacity = '1';
+                    scrollTopBtn.style.pointerEvents = 'auto';
+                } else {
+                    scrollTopBtn.style.opacity = '0';
+                    scrollTopBtn.style.pointerEvents = 'none';
+                }
+            });
+            scrollTopBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.AOS) AOS.init({ duration: 700, easing: 'ease-out-cubic', once: true, offset: 80 });
+        });
+    </script>
+    <span id="djangoSuccess" style="display:none;">{{ success }}</span>
+    <span id="djangoError" style="display:none;">{{ error }}</span>
+
+
+    <!-- Django server-side alerts -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const successMsg = document.getElementById("djangoSuccess")?.innerText.trim();
+            const errorMsg = document.getElementById("djangoError")?.innerText.trim();
+
+            if (successMsg) {
+                showOverlay("Success!", successMsg, 2800);
+            }
+
+            if (errorMsg) {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops!",
+                    text: errorMsg,
+                    confirmButtonText: "Retry"
+                });
+            }
+        });
+    </script>
+
+    <!-- jquery js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <!-- carousel js -->
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <!-- waypoints js -->
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <!-- wow js -->
+    <script src="{% static 'assets/js/wow.js' %}"></script>
+    <!-- imagesloaded js -->
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <!-- venobox js -->
+    <script src="{% static 'venobox/venobox.js' %}"></script>
+    <!-- ajax mail js -->
+    <script src="{% static 'assets/js/ajax-mail.js' %}"></script>
+    <!--  animated-text js -->
+    <script src="{% static 'assets/js/animated-text.js' %}"></script>
+    <!-- venobox min js -->
+    <script src="{% static 'venobox/venobox.min.js' %}"></script>
+    <!-- jquery meanmenu js -->
+    <script src="{% static 'assets/js/jquery.meanmenu.js' %}"></script>
+    <!-- jquery scrollup js -->
+    <script src="{% static 'assets/js/jquery.scrollUp.js' %}"></script>
+    <!-- theme js -->
+    <script src="{% static 'assets/js/theme.js' %}"></script>
+    <!-- range js -->
+    <script src="{% static 'assets/js/range.js' %}"></script>
+    <!-- barfiller js -->
+    <script src="{% static 'assets/js/jquery.barfiller.js' %}"></script>
+    <!--jave script -->
+    <script>
+        $(window).on("scroll", function () {
+            var scrolled = $(window).scrollTop();
+            if (scrolled > 300) $(".go-top").addClass("active");
+            if (scrolled < 300) $(".go-top").removeClass("active");
+        });
+
+        $(".go-top").on("click", function () {
+            $("html, body").animate(
+                {
+                    scrollTop: "0",
+                },
+                1200
+            );
+        });
+    </script>
+</body>
+
+</html>

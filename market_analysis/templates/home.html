@@ -1,0 +1,1359 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cryptocurrency market analysis</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="56x56" href="{% static 'assets/images/fav-icon/icon.png' %}">
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}" type="text/css" media="all" />
+    <!-- carousel CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}" type="text/css" media="all" />
+    <!-- theme default CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/owl.theme.default.min.css' %}" type="text/css" media="all" />
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}" type="text/css" media="all" />
+    <!-- animated-text CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/animated-text.css' %}" type="text/css" media="all" />
+    <!-- font-awesome CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}" type="text/css" media="all" />
+    <!-- font-flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}" type="text/css" media="all" />
+    <!-- theme-default CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/theme-default.css' %}" type="text/css" media="all" />
+    <!-- meanmenu CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/meanmenu.min.css' %}" type="text/css" media="all" />
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" media="all" />
+    <!-- venobox CSS -->
+    <link rel="stylesheet" href="{% static 'venobox/venobox.css' %}" type="text/css" media="all" />
+    <!-- responsive CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- loder -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+        <div class="loder-section left-section"></div>
+        <div class="loder-section right-section"></div>
+    </div>
+    <!--==================================================-->
+    <!-- Start cryptobit Main Menu Area -->
+    <!--==================================================-->
+    <div id="sticky-header" class="cryptobit_nav_manu upper">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="logo">
+                        <a class="logo_img" href="{% url 'home' %}" title="cryptobit">
+                            <img src="{% static 'assets/images/logo.png' %}" alt="" />
+                        </a>
+                        <a class="main_sticky" href="{% url 'home' %}" title="cryptobit">
+                            <img src="{% static 'assets/images/logo.png' %}" alt="astute" />
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <nav class="cryptobit_menu">
+                        <ul class="nav_scroll">
+                            <li><a href="{% url 'home' %}">Home</a></li>
+
+                            <li><a href="{% url 'about' %}">About</a></li>
+                            <li><a href="{% url 'admin-login' %}">Admin</a></li>
+                            <li><a href="#service">User <span>+</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="{% url 'user-login' %}">Login</a></li>
+                                    <li><a href="{% url 'user-login' %}">Register</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="{% url 'contact' %}">Contact</a></li>
+                        </ul>
+                        <div class="header-button">
+                            <a href="{% url 'user-login' %}"><i class="far fa-user"></i> Register </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Cryptobit Mobile Menu Area -->
+    <div class="mobile-menu-area d-sm-block d-md-block d-lg-none ">
+        <div class="mobile-menu">
+            <nav class="cripto_menu">
+                <ul class="nav_scroll">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'admin-login' %}">Admin</a></li>
+                    <li><a href="#service">User <span>+</span></a>
+                        <ul class="sub-menu">
+                            <li><a href="{% url 'user-login' %}">Login</a></li>
+                            <li><a href="{% url 'user-login' %}">Register</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End cryptobit main menu Area -->
+    <!--==================================================-->
+
+    <!-- ===============//banner section start here \\================= -->
+    <div class="clearfix" style="clear: both"></div>
+    <div id="particles">
+        <div id="webcoderskull">
+            <div class="hero-section">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="hero-content wow fadeInLeft" data-wow-delay=".4s">
+                                <div class="hero-title">
+                                    <span>0</span>
+                                    <h4>No Prediction Errors</h4>
+                                    <h1 class="hero-title">Next Generation</h1>
+                                    <h1 class="hero">Quantum Analytics</h1>
+                                </div>
+                                <div class="hero-text">
+                                    <p>Quantum computing and hybrid models transform complex data <br>referred to as
+                                        markets using smart algorithms.</p>
+                                </div>
+                                <div class="hero-button">
+                                    <a href="#">Start Analysis</a>
+                                </div>
+                                <div class="hero-bottom-text">
+                                    <p><span><i class="fas fa-check"></i></span> available Bitcoin & Ethereum Forecasts
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="dreamit-hero-thumb wow fadeInLeft" data-wow-delay=".5s">
+                                <div class="hero-main-thumb">
+                                    <img src="{% static 'assets/images/slider/main.png' %}" alt="">
+                                </div>
+                                <div class="hero-thumb-inner1 bounce-animate4">
+                                    <img src="{% static 'assets/images/slider/img1.png' %}" alt="">
+                                </div>
+                                <div class="hero-thumb-inner2 bounce-animate">
+                                    <img src="{% static 'assets/images/slider/img2.png' %}" alt="">
+                                </div>
+                                <div class="hero-thumb-inner3 bounce-animate3">
+                                    <img src="{% static 'assets/images/slider/img3.png' %}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix" style="clear: both"></div>
+    <!-- ===============//banner section end here \\================= -->
+
+    <!--==================================================-->
+    <!-- Start cryptobit about Area -->
+    <!--==================================================-->
+    <div class="about-area pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="dreamit-about-thumb wow fadeInLeft" data-wow-delay=".4s">
+                        <img src="{% static 'assets/images/resource/about.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="dreamit-section-title pb-5 wow fadeInLeft" data-wow-delay=".5s">
+                        <h4>What is CryptoQNet?</h4>
+                        <h1>We Built a Quantum Computing Platform</h1>
+                        <h1 class="section-title">To Analyze & Forecast Cryptocurrency Markets</h1>
+                        <p class="section-text">
+                            CryptoQNet is an advanced quantum computing framework designed to analyze
+                            highly volatile cryptocurrency markets. It leverages quantum feature maps,
+                            variational quantum circuits, and quantum neural networks to deliver faster,
+                            smarter, and more accurate predictions.
+                        </p>
+                        <p>
+                            Delivers accurate Bitcoin and Ethereum forecasting with lower errors than LSTM/GRU models,
+                            providing secure and efficient financial insights.
+                        </p>
+                    </div>
+
+                    <div class="about-button wow fadeInLeft" data-wow-delay=".6s">
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End cryptobit about Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start cryptobit feature Area -->
+    <!--==================================================-->
+    <div class="feature-area pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12">
+                    <div class="dreamit-section-title text-center up pb-5">
+                        <h4>Crypto Features</h4>
+                        <h1>Crypto Best <span>Features</span></h1>
+                        <p class="section-text">Cryptocurrencies are used primarily outside existing banking and
+                            coingovernmental institutions and are exchanged </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="feature-single-box wow fadeInLeft" data-wow-delay=".3s">
+                        <div class="feature-box-inner">
+                            <div class="feature-icon">
+                                <img src="{% static 'assets/images/resource/icon1.png' %}" alt="">
+                            </div>
+                            <div class="feature-title">
+                                <h3>Early Bonus Cash</h3>
+                                <p>Assertively matrix maintainable initia alignments. Objectively recaptiualize
+                                    transrent interfaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="feature-single-box upper1 wow fadeInLeft" data-wow-delay=".4s">
+                        <div class="feature-box-inner">
+                            <div class="feature-icon">
+                                <img src="{% static 'assets/images/resource/icon2.png' %}" alt="">
+                            </div>
+                            <div class="feature-title">
+                                <h3>Secure Payment</h3>
+                                <p>Assertively matrix maintainable initia alignments. Objectively recaptiualize
+                                    transrent interfaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="feature-single-box upper2 wow fadeInLeft" data-wow-delay=".5s">
+                        <div class="feature-box-inner">
+                            <div class="feature-icon">
+                                <img src="{% static 'assets/images/resource/icon3.png' %}" alt="">
+                            </div>
+                            <div class="feature-title">
+                                <h3>Universal Access</h3>
+                                <p>Assertively matrix maintainable initia alignments. Objectively recaptiualize
+                                    transrent interfaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="feature-single-box upper3 wow fadeInLeft" data-wow-delay=".6s">
+                        <div class="feature-box-inner">
+                            <div class="feature-icon">
+                                <img src="{% static 'assets/images/resource/icon4.png' %}" alt="">
+                            </div>
+                            <div class="feature-title">
+                                <h3>Low Cost Fidelity</h3>
+                                <p>Assertively matrix maintainable initia alignments. Objectively recaptiualize
+                                    transrent interfaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="feature-single-box upper4 wow fadeInLeft" data-wow-delay=".7s">
+                        <div class="feature-box-inner">
+                            <div class="feature-icon">
+                                <img src="{% static 'assets/images/resource/icon5.png' %}" alt="">
+                            </div>
+                            <div class="feature-title">
+                                <h3>Powerful Storage</h3>
+                                <p>Assertively matrix maintainable initia alignments. Objectively recaptiualize
+                                    transrent interfaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="feature-single-box upper5 wow fadeInLeft" data-wow-delay=".8s">
+                        <div class="feature-box-inner">
+                            <div class="feature-icon">
+                                <img src="{% static 'assets/images/resource/icon6.png' %}" alt="">
+                            </div>
+                            <div class="feature-title">
+                                <h3>Safe and Secure</h3>
+                                <p>Assertively matrix maintainable initia alignments. Objectively recaptiualize
+                                    transrent interfaces.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End cryptobit feature Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start cryptobit token Area -->
+    <!--==================================================-->
+    <div class="token-area pt-80 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12">
+                    <div class="dreamit-section-title text-center up pb-5">
+                        <h4>Token Sales</h4>
+                        <h1>ICO Token <span>Sales</span></h1>
+                        <p class="section-text">Cryptocurrencies are used primarily outside existing banking and
+                            coingovernmental institutions and are exchanged </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="col-lg-6 ol-md-6">
+                            <div class="single-token-box wow fadeInLeft" data-wow-delay=".4s">
+                                <div class="token-title">
+                                    <h4>Exchange Rate</h4>
+                                    <p><span>1 ETH</span> = $39000.00</p>
+                                    <p class="token-text"><span>1 BTC</span> = $120.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ol-md-6">
+                            <div class="single-token-box wow fadeInLeft" data-wow-delay=".5s">
+                                <div class="token-title">
+                                    <h4>Monthly Rate</h4>
+                                    <p><span>Low</span> = $39000.00</p>
+                                    <p class="token-text"><span>High</span> = $120.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ol-md-6">
+                            <div class="single-token-box wow fadeInLeft" data-wow-delay=".6s">
+                                <div class="token-title">
+                                    <h4>Private Sales</h4>
+                                    <p><span>1 BTC</span> = $39000.00</p>
+                                    <p class="token-text">Bonus <span>65% (1.10)</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ol-md-6">
+                            <div class="single-token-box wow fadeInLeft" data-wow-delay=".7s">
+                                <div class="token-title">
+                                    <h4>Public Sales</h4>
+                                    <p><span>1 BTC</span> = $39000.00</p>
+                                    <p class="token-text">Bonus <span>65% (1.10)</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ol-md-6">
+                            <div class="single-token-box wow fadeInLeft" data-wow-delay=".8s">
+                                <div class="token-title">
+                                    <h4>Investors</h4>
+                                    <p>890,000.00</p>
+                                    <p class="token-text">Ave. Invest($) <span>: 1200</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 ol-md-6">
+                            <div class="single-token-box wow fadeInLeft" data-wow-delay=".9s">
+                                <div class="token-title">
+                                    <h4>Pivot Points</h4>
+                                    <p><span>1 ETH</span> = $39000.00</p>
+                                    <p class="token-text"><span>1 BTC</span> = $120.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="count-down-date-tabs wow fadeInLeft" data-wow-delay=".5s">
+                        <div id="countdown">
+                            <div class="coundown-title">
+                                <h3>Token Sale Start in</h3>
+                            </div>
+                            <div id='tiles'></div>
+                            <div class="labels">
+                                <ul>
+                                    <li>Days</li>
+                                </ul>
+                                <ul>
+                                    <li>Hours</li>
+                                </ul>
+                                <ul>
+                                    <li>Mins</li>
+                                </ul>
+                                <ul>
+                                    <li class="labels-text">Sec</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="extra-controls form-inline">
+                                <div class="form-group">
+                                    <input type="text" class="js-input-from form-control" value="0" />
+                                    <span><input type="text" class="js-input-to form-control" value="0" /></span>
+                                </div>
+                            </div>
+                            <div class="range-slider">
+                                <input type="text" class="js-range-slider" value="" />
+                            </div>
+                            <div class="range-title-menu">
+                                <ul>
+                                    <li>Soft Cap</li>
+                                    <li>Crowdsale</li>
+                                    <li class="range-text">Hard Cap</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="count-shape">
+                            <img src="{% static 'assets/images/resource/count.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End Cryptobit token Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start Cryptobit token sale Area -->
+    <!--==================================================-->
+    <div class="token-sale-area pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12">
+                    <div class="dreamit-section-title text-center  pb-5">
+                        <h1>Token Sale Proceeds</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="pie-chart-thumb">
+                        <div id="pie-chart"></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <h5>Information</h5>
+                    <div id="bar-chart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End Cryptobit token sale Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start Cryptobit road map Area -->
+    <!--==================================================-->
+    <div class="road-map-area pt-100 pb-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-sm-12">
+                    <div class="dreamit-section-title text-center up pb-5">
+                        <h4>Timeline</h4>
+                        <h1>Stratagy & <span>Roadmap</span></h1>
+                        <p class="section-text">Cryptocurrencies are used primarily outside existing banking and
+                            coingovernmental institutions and are exchanged </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-130">
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-road-map-box wow fadeInLeft" data-wow-delay=".4s">
+                        <div class="road-map-inner-box">
+                            <div class="road-top-title">
+                                <p>Jun 2025</p>
+                            </div>
+                            <div class="road-map-content">
+                                <div class="road-map-title">
+                                    <h4>Concept</h4>
+                                </div>
+                                <div class="road-map-text">
+                                    <p>Cryptocurrencies are institu usedgovernmentals the Bitcoin currency</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-road-map-box upper1 wow fadeInLeft" data-wow-delay=".5s">
+                        <div class="road-map-inner-box">
+                            <div class="road-top-title">
+                                <p>Jun 2025</p>
+                            </div>
+                            <div class="road-map-content">
+                                <div class="road-map-title">
+                                    <h4>Development</h4>
+                                </div>
+                                <div class="road-map-text">
+                                    <p>Cryptocurrencies are institu usedgovernmentals the Bitcoin currency</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-road-map-box upper2 wow fadeInLeft" data-wow-delay=".6s">
+                        <div class="road-map-inner-box">
+                            <div class="road-top-title">
+                                <p>Jun 2025</p>
+                            </div>
+                            <div class="road-map-content">
+                                <div class="road-map-title">
+                                    <h4>Concept</h4>
+                                </div>
+                                <div class="road-map-text">
+                                    <p>Cryptocurrencies are institu usedgovernmentals the Bitcoin currency</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="single-road-map-box upper3 wow fadeInLeft" data-wow-delay=".7s">
+                        <div class="road-map-inner-box">
+                            <div class="road-top-title">
+                                <p>Jun 2025</p>
+                            </div>
+                            <div class="road-map-content">
+                                <div class="road-map-title">
+                                    <h4>Development</h4>
+                                </div>
+                                <div class="road-map-text">
+                                    <p>Cryptocurrencies are institu usedgovernmentals the Bitcoin currency</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="road-shape wow fadeInLeft" data-wow-delay=".4s">
+                <div class="road-thumb">
+                    <img src="{% static 'assets/images/resource/border.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End Cryptobit road map Area -->
+    <!--==================================================-->
+
+    <!-- ===============//table section start here \\=============== -->
+    <div class="table-section pt-80 pb-80" id="table">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="dreamit-section-title  pb-3">
+                        <h1>Market <span>Trend</span></h1>
+                        <p><span class="table-title">+0.36%</span> Market up in the last 24 hours</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="explore_nav text-right">
+                        <div class="explore_menu">
+                            <form action="#">
+                                <select name="catagories" id="catagories">
+                                    <option value="volvo">All Catagories</option>
+                                    <option value="volvo">Video Game Items</option>
+                                    <option value="volvo">Art</option>
+                                    <option value="volvo">Music</option>
+                                    <option value="volvo">Domain Names</option>
+                                </select>
+                                <select name="cars" id="cars">
+                                    <option value="7days">7 Days</option>
+                                    <option value="8days">8 Days</option>
+                                    <option value="9days">9 Days</option>
+                                    <option value="5days">5 Days</option>
+                                </select>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="table-reponsive box wow fadeInLeft" data-wow-delay=".4s">
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th> <span>#</span> Currency</th>
+                                <th>$ Price</th>
+                                <th>24H Change</th>
+                                <th>Market Cap.</th>
+                                <th>T. Supply</th>
+                                <th>24H Volume</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="single">
+                                <td> <span>1</span> <img src="{% static 'assets/images/resource/ra-1.png' %}" alt="">
+                                    <h6>Bitcoin <span class="img-text">BTC</span></h6>
+                                </td>
+                                <td>$53,967.089</td>
+                                <td><img class="images" src="{% static 'assets/images/resource/icon7.png' %}"
+                                        alt=""><span class="color-1">5.43%</span></td>
+                                <td>0.05M</td>
+                                <td>1.5K</td>
+                                <td>68.5K</td>
+                            </tr>
+                            <tr class="one">
+                                <td> <span>2</span> <img src="{% static 'assets/images/resource/ra-2.png' %}" alt="">
+                                    <h6>Ethereum <span class="img-text">ETH</span></h6>
+                                </td>
+                                <td>$98,967.056</td>
+                                <td><img class="images" src="{% static 'assets/images/resource/icon8.png' %}" alt="">
+                                    <span class="color-2">6.85</span>
+                                </td>
+                                <td>10.80M</td>
+                                <td>5.5K</td>
+                                <td>85.09K</td>
+                            </tr>
+                            <tr class="double">
+                                <td><span>3</span><img src="{% static 'assets/images/resource/ra-3.png' %}" alt="">
+                                    <h6>Tether <span class="img-text">THR</span> </h6>
+                                </td>
+                                <td>$44,967.090</td>
+                                <td><img class="images" src="{% static 'assets/images/resource/icon7.png' %}"
+                                        alt=""><span class="color-1">3.96%</span></td>
+                                <td>0.05M</td>
+                                <td>0.3k</td>
+                                <td>100k</td>
+                            </tr>
+                            <tr class="one">
+                                <td> <span>4</span> <img src="{% static 'assets/images/resource/ra-4.png' %}" alt="">
+                                    <h6>Solana <span class="img-text">SOL</span></h6>
+                                </td>
+                                <td>$53,967.089</td>
+                                <td><img class="images" src="{% static 'assets/images/resource/icon7.png' %}"
+                                        alt=""><span class="color-1">9.30%</span></td>
+                                <td>12.09M</td>
+                                <td>1.5K</td>
+                                <td>68.5K</td>
+                            </tr>
+                            <tr class="triple">
+                                <td> <span>5</span> <img src="{% static 'assets/images/resource/ra-5.png' %}" alt="">
+                                    <h6>Binance Coin <span class="img-text">BNC</span></h6>
+                                </td>
+                                <td>$67,967.070</td>
+                                <td><img class="images" src="{% static 'assets/images/resource/icon8.png' %}"
+                                        alt=""><span class="color-2">8.90%</span></td>
+                                <td>0.07M</td>
+                                <td>45K</td>
+                                <td>98.9K</td>
+                            </tr>
+                            <tr class="one">
+                                <td> <span>6</span> <img src="{% static 'assets/images/resource/ra-6.png' %}" alt="">
+                                    <h6>Dogecoin <span class="img-text">DOGE</span></h6>
+                                </td>
+                                <td>$53,967.089</td>
+                                <td><img class="images" src="{% static 'assets/images/resource/icon7.png' %}"
+                                        alt=""><span class="color-1">5.43%</span></td>
+                                <td>0.05M</td>
+                                <td>1.5K</td>
+                                <td>68.5K</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===============//table section end here \\================== -->
+
+    <!-- ===============//table section start here \\================ -->
+    <div class="cripto-area pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="dreamit-cripto-thumb wow fadeInLeft" data-wow-delay=".4s">
+                        <div class="cripto-main-thumb">
+                            <img src="{% static 'assets/images/resource/cripto.png' %}" alt="">
+                        </div>
+                        <div class="cripto-thumb-inner bounce-animate4">
+                            <img src="{% static 'assets/images/resource/cripto1.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="dreamit-section-title wow fadeInLeft" data-wow-delay=".5s">
+                        <h4>Features of Crypto</h4>
+                        <h1>We Built a Crypto Coin</h1>
+                        <h1 class="section-title">To Buy Sell Shares</h1>
+                        <p class="section-text">Cryptocurrencies are used primarily outside existing banking
+                            governmental institutions and exchanged</p>
+                    </div>
+                    <div class="single-cripto-icon-box wow fadeInLeft" data-wow-delay=".6s">
+                        <div class="cripto-icon">
+                            <div class="icon-thumb">
+                                <img src="{% static 'assets/images/resource/crp1.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="cripto-title">
+                            <h5>Create New Account</h5>
+                        </div>
+                    </div>
+                    <div class="single-cripto-icon-box up wow fadeInLeft" data-wow-delay=".7s">
+                        <div class="cripto-icon">
+                            <div class="icon-thumb">
+                                <img src="{% static 'assets/images/resource/crp2.png' %}" alt="">
+                            </div>
+                        </div>
+                        <div class="cripto-title">
+                            <h5>Link Your Bank Account</h5>
+                        </div>
+                    </div>
+                    <div class="cripto-button wow fadeInLeft" data-wow-delay=".8s">
+                        <a href="#">Download App</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===============//table section end here \\================== -->
+
+    <!-- ===============//faq section start here \\================= -->
+    <div class="faq-area pt-100 pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="dreamit-section-title up text-center pb-35">
+                        <h4>FAQ</h4>
+                        <h1>Question & <span>Answer</span></h1>
+                        <p class="section-text">Cryptocurrencies are used primarily outside existing banking
+                            governmental institutions and exchanged</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="tab-content text-center wow fadeInDown" data-wow-delay=".3">
+                        <ul class="tabs">
+                            <li class="active" rel="tab1"> <i class="fas fa-play"></i>General Question</li>
+                            <li rel="tab3"><i class="fas fa-play"></i> About ICO</li>
+                            <li rel="tab4"><i class="fas fa-play"></i> Token Sales</li>
+                            <li rel="tab5"><i class="fas fa-play"></i> Client Related</li>
+                            <li rel="tab6"><i class="fas fa-play"></i> Pre-ICO</li>
+                            <li rel="tab7"><i class="fas fa-play"></i> Legal Info</li>
+                            <li rel="tab2"><i class="fas fa-play"></i> Pre sales</li>
+                            <li class="border-none" rel="tab8"><i class="fas fa-play"></i> Token Sales</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="tab_container wow fadeInDown" data-wow-delay=".4">
+                        <h3 class="d_active tab_drawer_heading" rel="tab1">Tab 1</h3>
+                        <div id="tab1" class="tab_content">
+                            <ul class="accordion">
+                                <li>
+                                    <a>Can I make payments directly from an exchange?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>When will CICO be listed on exchanges?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>What is the ICO Token asmart contract address?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>How can I create a crypto-wallet?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h3 class="tab_drawer_heading" rel="tab2"> Token </h3>
+                        <div id="tab2" class="tab_content">
+                            <ul class="accordion">
+                                <li>
+                                    <a>Can I make payments directly from an exchange?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>When will CICO be listed on exchanges?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>What is the ICO Token asmart contract address?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>How can I create a crypto-wallet?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- #tab2 -->
+                        <h3 class="tab_drawer_heading" rel="tab3"> Client </h3>
+                        <div id="tab3" class="tab_content">
+
+                            <ul class="accordion">
+                                <li>
+                                    <a>Can I make payments directly from an exchange?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>When will CICO be listed on exchanges?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>What is the ICO Token asmart contract address?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>How can I create a crypto-wallet?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- #tab3 -->
+                        <h3 class="tab_drawer_heading" rel="tab4"> Pre ICO</h3>
+                        <div id="tab4" class="tab_content">
+
+                            <ul class="accordion">
+                                <li>
+                                    <a>Can I make payments directly from an exchange?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>When will CICO be listed on exchanges?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>What is the ICO Token asmart contract address?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>How can I create a crypto-wallet?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- #tab3 -->
+                        <h3 class="tab_drawer_heading" rel="tab5"> Legal</h3>
+                        <div id="tab5" class="tab_content">
+                            <ul class="accordion">
+                                <li>
+                                    <a>Can I make payments directly from an exchange?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>When will CICO be listed on exchanges?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>What is the ICO Token asmart contract address?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>How can I create a crypto-wallet?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- #tab3 -->
+                        <h3 class="tab_drawer_heading" rel="tab6"> Legal</h3>
+                        <div id="tab6" class="tab_content">
+                            <ul class="accordion">
+                                <li>
+                                    <a>Can I make payments directly from an exchange?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>When will CICO be listed on exchanges?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>What is the ICO Token asmart contract address?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>How can I create a crypto-wallet?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- #tab3 -->
+                        <h3 class="tab_drawer_heading" rel="tab7"> Legal</h3>
+                        <div id="tab7" class="tab_content">
+                            <ul class="accordion">
+                                <li>
+                                    <a>Can I make payments directly from an exchange?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>When will CICO be listed on exchanges?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>What is the ICO Token asmart contract address?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>How can I create a crypto-wallet?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- #tab3 -->
+                        <h3 class="tab_drawer_heading" rel="tab8"> Legal</h3>
+                        <div id="tab8" class="tab_content">
+                            <ul class="accordion">
+                                <li>
+                                    <a>Can I make payments directly from an exchange?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>When will CICO be listed on exchanges?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>What is the ICO Token asmart contract address?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                                <li>
+                                    <a>How can I create a crypto-wallet?</a>
+                                    <p>Collaboratively syndicate turnkey methodologies after cutting-edge
+                                        potentialities. Energistically enable standards compliant e-markets without
+                                        viral initiatives. Globally pontificate intermandated initiatives with</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===============//faq section end here \\=================== -->
+
+    <!--==================================================-->
+    <!-- Start Cryptobit popular section Area -->
+    <!--==================================================-->
+    <div class="blog-section pt-100 pb-70" id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="dreamit-section-title text-center up pb-30">
+                    <h4>Blog</h4>
+                    <h1>Recent <span>Blog</span></h1>
+                    <p class="section-text">Cryptocurrencies are used primarily outside existing banking governmental
+                        institutions and exchanged</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="dreamit-blog-box wow fadeInUp" data-wow-delay=".4s">
+                        <div class="blog-box-inner">
+                            <div class="dreamit-blog-thumb">
+                                <img src="{% static 'assets/images/resource/blog-1.jpg' %}" alt="">
+                            </div>
+                            <div class="popular-blog-content">
+                                <div class="meta-blog">
+                                    <a href="#">Mar 19, 2025</a>
+                                </div>
+                                <div class="blog-title">
+                                    <h2><a href="blog-details.html">Content strategy can help <br> engage customers.</a>
+                                    </h2>
+                                </div>
+                                <div class="blog-text">
+                                    <p>Collaboratively syndicate turnkey are Energistically enable standards in the
+                                        pontificate interman.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="dreamit-blog-box upper1 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="blog-box-inner">
+                            <div class="dreamit-blog-thumb">
+                                <img src="{% static 'assets/images/resource/blog-2.jpg' %}" alt="">
+                            </div>
+                            <div class="popular-blog-content">
+                                <div class="meta-blog">
+                                    <a href="#">Mar 19, 2025</a>
+                                </div>
+                                <div class="blog-title">
+                                    <h2><a href="blog-details.html">Crypto Buy and Sell Coin <br> with Trusted
+                                            Agency.</a></h2>
+                                </div>
+                                <div class="blog-text">
+                                    <p>Collaboratively syndicate turnkey are Energistically enable standards in the
+                                        pontificate interman.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="dreamit-blog-box upper2 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="blog-box-inner">
+                            <div class="dreamit-blog-thumb">
+                                <img src="{% static 'assets/images/resource/blog-3.jpg' %}" alt="">
+                            </div>
+                            <div class="popular-blog-content">
+                                <div class="meta-blog">
+                                    <a href="#">Mar 19, 2025</a>
+                                </div>
+                                <div class="blog-title">
+                                    <h2><a href="blog-details.html">Coin strategy can help you <br> engage Audience</a>
+                                    </h2>
+                                </div>
+                                <div class="blog-text">
+                                    <p>Collaboratively syndicate turnkey are Energistically enable standards in the
+                                        pontificate interman.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End Cryptobit popular section Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start Cryptobit contact Area -->
+    <!--==================================================-->
+    <div class="contact-form-area pt-3 pb-100" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="dreamit-section-title text-center up pb-40">
+                    <h4>Contact</h4>
+                    <h1>Contact <span>with Us</span></h1>
+                    <p class="section-text">Cryptocurrencies are used primarily outside existing banking governmental
+                        institutions and exchanged</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="contact-icon-box wow fadeInLeft" data-wow-delay=".3s">
+                        <div class="contact-icon-thumb">
+                            <img src="{% static 'assets/images/resource/contact1.png' %}" alt="">
+                        </div>
+                        <div class="contact-text">
+                            <p>hr@rgtech.org.in</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6  col-sm-12">
+                    <div class="contact-icon-box wow fadeInLeft" data-wow-delay=".4s">
+                        <div class="contact-icon-thumb">
+                            <img src="{% static 'assets/images/resource/contact2.png' %}" alt="">
+                        </div>
+                        <div class="contact-text">
+                            <p>+91 96037 26459</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6  col-sm-12">
+                    <div class="contact-icon-box wow fadeInRight" data-wow-delay=".5s">
+                        <div class="contact-icon-thumb">
+                            <img src="{% static 'assets/images/resource/contact3.png' %}" alt="">
+                        </div>
+                        <div class="contact-text">
+                            <p>Join Us on Telegram</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row pt-50">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="row">
+                        <div class="contact-form-box wow fadeInLeft" data-wow-delay=".4s">
+                            <div class="contact-form-title">
+                                <h3>Get In Touch</h3>
+                            </div>
+                            <form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
+                                <div class="row">
+                                    <div class="col-lg-6  col-md-6 col-sm-12">
+                                        <div class="from-box">
+                                            <input type="text" name="name" placeholder="Your Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6  col-md-6 col-sm-12">
+                                        <div class="from-box">
+                                            <input type="text" name="E-Mail" placeholder="Enter E-Mail">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-sm-12">
+                                        <div class="from-box">
+                                            <input type="text" name="Subject" placeholder="Subject">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <div class="from-box">
+                                            <textarea name="message" id="massage" placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="from-box">
+                                    <button type="submit">Send Message</button>
+                                </div>
+                            </form>
+                            <div id="status"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="contact-form-thumb wow fadeInRight" data-wow-delay=".4s">
+                        <img src="{% static 'assets/images/resource/cartoon-bg.png' %}" alt="">
+                        <div class="form-inner-thumb bounce-animate3">
+                            <img src="{% static 'assets/images/resource/cartoon.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- Start Cryptobit contact Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start Cryptobit Footer Middle Area -->
+    <!--==================================================-->
+    <div class="footer-middle pt-80 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="widgets-company-info  pt-3 wow fadeInLeft" data-wow-delay=".4s">
+                        <div class="cryptobit-logo">
+                            <a class="logo_img" href="{% url 'home' %}" title="cryptobit">
+                                <img src="{% static 'assets/images/logo.png' %}" alt="" />
+                            </a>
+                        </div>
+                        <div class="company-info-desc">
+                            <p>Cryptocurrencies are used prim outside existing banking govern institutions hanged</p>
+                        </div>
+                        <div class="company_icon">
+                            <a class="facebook" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="twitter" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a class="linkedin" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="pinterest" href="#"><i class="fab fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="widget-nav-menu wow fadeInLeft" data-wow-delay=".5s">
+                                <h4 class="widget-title">Catagories</h4>
+                                <div class="menu-quick-link-content">
+                                    <ul class="menu">
+                                        <li><a href="#">What is ICO</a></li>
+                                        <li><a href="#">Token</a></li>
+                                        <li><a href="#">Road Map</a></li>
+                                        <li><a href="#">Advisor</a></li>
+                                        <li><a href="#">Payments</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="widget-nav-menu upper wow fadeInLeft" data-wow-delay=".6s">
+                                <h4 class="widget-title">Useful Link</h4>
+                                <div class="menu-quick-link-content">
+                                    <ul class="menu">
+                                        <li><a href="#">Payment & TAX</a></li>
+                                        <li><a href="#">Terms of Services</a></li>
+                                        <li><a href="#">My Account </a></li>
+                                        <li><a href="#">Return Policy</a></li>
+                                        <li><a href="#">Discount</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 col-sm-12">
+                            <div class="widget-nav-menu upper1 wow fadeInLeft" data-wow-delay=".7s">
+                                <h4 class="widget-title">Newsletter</h4>
+                                <div class="menu-quick-link">
+                                    <p>Get now free 20% discount for all products on your first order</p>
+                                </div>
+                                <div class="contact-form-box-2 text-center">
+                                    <form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
+                                        <div class="from-box1">
+                                            <input type="text" name="E-Mail" placeholder="Enter Your E-Mail" />
+                                            <button type="submit">
+                                                <i class="fa fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                    <div id="status"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row footer-bottom mt-65">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-bottom-content">
+                        <div class="footer-bottom-content-copy">
+                            <p>© Cryptobit all Rights Reserved. By: <span>RG Tech</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-bottom-content">
+                        <div class="footer-bottom-menu">
+                            <ul>
+                                <li>Privacy Policy</li>
+                                <li>Terms & Condition</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="footer-bottom-shape">
+                        <img src="{% static 'assets/images/resource/footer-b.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- End Cryptobit Footer Middle Area -->
+    <!--==================================================-->
+
+    <!--==================================================-->
+    <!-- Start scroll Area -->
+    <!--==================================================-->
+    <div class="scroll-area">
+        <div class="top-wrap">
+            <div class="go-top-btn-wraper">
+                <div class="go-top go-top-button">
+                    <i class="fas fa-arrow-up"></i>
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--==================================================-->
+    <!-- Start scroll Area -->
+    <!--==================================================-->
+
+    <!-- jquery js -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+    <!-- carousel js -->
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <!-- waypoints js -->
+    <script src="{% static 'assets/js/waypoints.min.js' %}"></script>
+    <!-- wow js -->
+    <script src="{% static 'assets/js/wow.js' %}"></script>
+    <!-- imagesloaded js -->
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <!-- venobox js -->
+    <script src="{% static 'venobox/venobox.js' %}"></script>
+    <!-- ajax mail js -->
+    <script src="{% static 'assets/js/ajax-mail.js' %}"></script>
+    <!--  animated-text js -->
+    <script src="{% static 'assets/js/animated-text.js' %}"></script>
+    <!-- venobox min js -->
+    <script src="{% static 'venobox/venobox.min.js' %}"></script>
+    <!-- jquery meanmenu js -->
+    <script src="{% static 'assets/js/jquery.meanmenu.js' %}"></script>
+    <!-- jquery scrollup js -->
+    <script src="{% static 'assets/js/jquery.scrollUp.js' %}"></script>
+    <!-- theme js -->
+    <script src="{% static 'assets/js/theme.js' %}"></script>
+    <!-- range js -->
+    <script src="{% static 'assets/js/range.js' %}"></script>
+    <!-- particls.chart1 js -->
+    <script src="{% static 'assets/js/particls.chart1.js' %}"></script>
+    <!-- barfiller js -->
+    <script src="{% static 'assets/js/jquery.barfiller.js' %}"></script>
+    <!-- drawchart js -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+</body>
+
+</html>
